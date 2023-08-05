@@ -31,7 +31,7 @@ public class CustomInspector : EditorWindow
             EditorGUILayout.Space();
             foreach (MonoBehaviour monoBehaviour in _gameObject.GetComponents<MonoBehaviour>())
                 if (monoBehaviour != null)
-                {                    
+                {
                     var style = new GUIStyle();
                     style.fontSize = 16;
                     style.normal.textColor = Color.green;
@@ -124,9 +124,10 @@ public class CustomInspector : EditorWindow
                     EditorGUILayout.Space();
 
                 }
+        }
             EditorGUILayout.EndScrollView();
             EditorGUILayout.EndVertical();
-        }
+        
     }
 
     public override void SaveChanges()
