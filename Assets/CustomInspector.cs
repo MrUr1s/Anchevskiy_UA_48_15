@@ -11,7 +11,7 @@ public class CustomInspector : EditorWindow
 
     private GameObject _gameObject;
     private Vector2 _scrollPosition;
-    [MenuItem("Extensions/Windows/References Inspector #g") ]
+    [MenuItem("Extensions/Windows/References Inspector #C") ]
     public static void ShowMyEditor()
     {
            var window=GetWindow<CustomInspector>("CustomInspector",true);
