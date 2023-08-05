@@ -315,12 +315,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e3b155f00ec114eafcd6535ad8f77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameObject: {fileID: 0}
   _int: 209
-  _intRange: 555
+  _intRange: 100
   _float: 9.19
   _bool: 1
   _long: 266
   _double: 7.8
+  _string: dsgfsdgdsg
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,3 +360,4 @@ MonoBehaviour:
     width: 0
     height: 0
   _testEnum: 1
+  _listInt: 

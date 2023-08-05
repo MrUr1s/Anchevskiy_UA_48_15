@@ -110,6 +110,10 @@ public class CustomInspector : EditorWindow
                         {
                             t.SetValue(monoBehaviour, EditorGUILayout.RectIntField(t.Name, (RectInt)t.GetValue(monoBehaviour)));
                         }
+                        else if (t.FieldType == typeof(GameObject))
+                        {
+                            t.SetValue(monoBehaviour, EditorGUILayout.ObjectField(t.Name, (GameObject)t.GetValue(monoBehaviour), typeof(GameObject), true));
+                        }
                         else if (t.FieldType.IsEnum)
                         {
                             List<string> list = new();
@@ -117,8 +121,18 @@ public class CustomInspector : EditorWindow
                                 list.Add(e.ToString());
                             t.SetValue(monoBehaviour, EditorGUILayout.Popup((int)t.GetValue(monoBehaviour), list.ToArray()));
                         }
+                        else if (t.FieldType.IsArray)
+                        {
+                            Debug.Log("Массивы временно не отображаются");
+                        }
+                        else if (t.FieldType == typeof(string))
+                        {
+                            t.SetValue(monoBehaviour, EditorGUILayout.TextField(t.Name, (string)t.GetValue(monoBehaviour)));
+                        }
                         else
+                        {
                             Debug.Log(t.FieldType);
+                        }
                     }
 
                     EditorGUILayout.Space();

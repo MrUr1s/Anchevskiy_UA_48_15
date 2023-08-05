@@ -28,6 +28,8 @@ public class TestScripts2 : MonoBehaviour
     private Rect _rect;
     [SerializeField]
     private TestEnum _testEnum;
+    [SerializeField]
+    private int[] _arrayInt;
 }
 
 public enum TestEnum { TestEnum1, TestEnum2 };

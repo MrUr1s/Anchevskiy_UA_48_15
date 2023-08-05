@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestScripts : MonoBehaviour
 {
     [SerializeField]
+    private GameObject _gameObject;
+    [SerializeField]
     private int _int;
     [SerializeField, Range(0,100) ]
     private int  _intRange;
@@ -16,6 +18,8 @@ public class TestScripts : MonoBehaviour
     private long _long;
     [SerializeField]
     private double _double;
+    [SerializeField]
+    private string _string;
 
 
 }
